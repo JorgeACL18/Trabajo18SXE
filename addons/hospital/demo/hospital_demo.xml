@@ -1,0 +1,52 @@
+<odoo>
+    <record id="demo_paciente_1" model="hospital.paciente">
+        <field name="name">Juanito Landito</field>
+        <field name="sintomas">Leve dolor de cabeza.</field>
+    </record>
+
+    <record id="demo_paciente_2" model="hospital.paciente">
+        <field name="name">Manolito de la Villa</field>
+        <field name="sintomas">Fractura craneal.</field>
+    </record>
+
+    <record id="demo_paciente_3" model="hospital.paciente">
+        <field name="name">María del Carmen Fuentes</field>
+        <field name="sintomas">Perdió 5 dedos.</field>
+    </record>
+
+    <record id="demo_medico_1" model="hospital.medico">
+        <field name="name">Dra. Elena Rodríguez</field>
+        <field name="numero_colegiado">282845678</field>
+    </record>
+
+    <record id="demo_medico_2" model="hospital.medico">
+        <field name="name">Dr. Fernando Fernandez</field>
+        <field name="numero_colegiado">676761010</field>
+    </record>
+
+    <record id="demo_medico_3" model="hospital.medico">
+        <field name="name">Dra. Giselle Parker</field>
+        <field name="numero_colegiado">452314549</field>
+    </record>
+
+    <record id="demo_consulta_1" model="hospital.consulta">
+        <field name="paciente_id" ref="demo_paciente_1"/>
+        <field name="medico_id" ref="demo_medico_1"/>
+        <field name="diagnostico">Aspirina y para la cama.</field>
+        <field name="fecha" eval="datetime.now()"/>
+    </record>
+
+    <record id="demo_consulta_2" model="hospital.consulta">
+        <field name="paciente_id" ref="demo_paciente_2"/>
+        <field name="medico_id" ref="demo_medico_2"/>
+        <field name="diagnostico">Urgencias INMEDIATAMENTE</field>
+        <field name="fecha" eval="datetime.now()"/>
+    </record>
+
+    <record id="demo_consulta_3" model="hospital.consulta">
+        <field name="paciente_id" ref="demo_paciente_3"/>
+        <field name="medico_id" ref="demo_medico_3"/>
+        <field name="diagnostico">Bendita y paracetamol.</field>
+        <field name="fecha" eval="datetime.now()"/>
+    </record>
+</odoo>
